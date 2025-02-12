@@ -1,0 +1,20 @@
+[
+    {
+        "name": "kaka",
+        "age": "23",
+        "amount": "876",
+        "image": "static/uploads/indian-man-3615047_1280.jpg"
+    },
+    {
+        "name": "Ramswarup kumar",
+        "age": "44",
+        "amount": "2140000",
+        "image": "static/uploads/istockphoto-1369559939-2048x2048.jpg"
+    },
+    {
+        "name": "Ajay Verma",
+        "age": "30",
+        "amount": "1460000",
+        "image": "static/uploads/indian-786117_1280.jpg"
+    }
+]
