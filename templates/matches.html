@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matches - Fantasy Gaming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b, #ffcc00);
+            color: black;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+        }
+        h2 {
+            color: #d80027;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .book-rank-btn {
+            background: #d80027;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px auto;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .book-rank-btn:hover {
+            background: #b22222;
+            transform: scale(1.05);
+        }
+        .match-card {
+            background: #fff7f7;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            border: 2px solid #d80027;
+            transition: transform 0.3s;
+        }
+        .match-card:hover {
+            transform: scale(1.02);
+        }
+        .no-match {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #d80027;
+            margin: 20px 0;
+        }
+        .click-here {
+            position: absolute;
+            right: -70px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            background: #ffcc00;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transform: rotate(-10deg);
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Today's Matches Section -->
+        <h2>Today's Matches</h2>
+        {% if today_matches %}
+        <div class="text-center">
+            <button class="book-rank-btn" onclick="window.location.href='/bookrank'">
+                📢 Book Your Rank in Today's Match Fast
+                <span class="click-here">👈 Click Here</span>
+            </button>
+        </div>
+        {% endif %}
+
+        {% if today_matches %}
+            {% for match in today_matches %}
+                <div class="match-card">
+                    <h4>🔥 {{ match.team1 }} vs {{ match.team2 }}</h4>
+                    <p><strong>🏏 Format:</strong> {{ match.matchFormat }}</p>
+                    <p><strong>📍 Venue:</strong> {{ match.venue }}, {{ match.city }}</p>
+                    <p><strong>⏰ Time:</strong> {{ match.start_time }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-match">🚫 There is no match today.</p>
+        {% endif %}
+
+        <hr>
+
+        <!-- Upcoming Matches Section -->
+        <h2>Upcoming Matches</h2>
+        {% if upcoming_matches %}
+        <div class="text-center">
+            <button class="book-rank-btn" onclick="window.location.href='/bookrank'">
+                📢 Book Your Rank in Upcoming Matches
+                <span class="click-here">👉 Click Here</span>
+            </button>
+        </div>
+        {% endif %}
+
+        {% if upcoming_matches %}
+            {% for match in upcoming_matches %}
+                <div class="match-card">
+                    <h4>🔥 {{ match.team1 }} vs {{ match.team2 }}</h4>
+                    <p><strong>🏏 Format:</strong> {{ match.matchFormat }}</p>
+                    <p><strong>📍 Venue:</strong> {{ match.venue }}, {{ match.city }}</p>
+                    <p><strong>⏰ Time:</strong> {{ match.start_time }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-match">🚫 No upcoming matches.</p>
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

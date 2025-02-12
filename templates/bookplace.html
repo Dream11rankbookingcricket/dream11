@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Rank</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff6b6b, #ffcc00);
+            color: black;
+            text-align: center;
+            overflow: hidden;
+        }
+        header {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            height: 80px;
+        }
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #ffcc00;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .contact-links a:hover {
+            transform: scale(1.1);
+        }
+        .contact-links img {
+            width: 20px;
+            height: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 150px auto 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .rank-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #d80027;
+            border-radius: 5px;
+            background: #fff7f7;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: glow 2s infinite alternate;
+        }
+        .rank-option:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
+        }
+        @keyframes glow {
+            0% { box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.3); }
+            100% { box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7); }
+        }
+        .rank-option img {
+            height: 50px;
+            width: 50px;
+            margin-right: 10px;
+        }
+        .rank-option span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d80027;
+            text-shadow: 0px 0px 5px #ffcc00;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d2d2d;
+            margin-left: 10px;
+        }
+        .book-btn {
+            background: #d80027;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 150px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite alternate;
+        }
+        .book-btn:hover {
+            background: #c70024;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .help-text {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #d80027;
+            text-shadow: 0px 0px 8px #ffcc00;
+            animation: moveText 2s infinite alternate;
+        }
+        @keyframes moveText {
+            0% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"> 
+            <img src="static/uploads/Logo of site.png" alt="Logo"> 
+        </div>
+        <div class="contact-links">
+            <a href="https://wa.me/message/GG7GVTZA2AB6O1" class="whatsapp">
+                <img src="static/uploads/WhatsApp.webp" alt="WhatsApp"> WhatsApp
+            </a>
+            <a href="https://t.me/+_YQmoy269aE0YTFl" class="telegram">
+                <img src="static/uploads/Telegram.webp" alt="Telegram"> Telegram
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Select Your Rank</h2>
+        <div class="rank-option">
+            <img src="static/uploads/Winner1_logo-removebg-preview.png" alt="1st Place">
+            <div>
+                <span>Book 1st Rank</span>
+                <p class="price">₹1999/-</p>
+            </div>
+            <button class="book-btn" onclick="window.location.href='/matches'">Book Now</button>
+        </div>
+        <div class="rank-option">
+            <img src="static/uploads/Winner2_logo-removebg-preview.png" alt="2nd Place">
+            <div>
+                <span>Book 2nd Rank</span>
+                <p class="price">₹1499/-</p>
+            </div>
+            <button class="book-btn" onclick="window.location.href='/matches'">Book Now</button>
+        </div>
+        <div class="rank-option">
+            <img src="static/uploads/Winner3_logo-removebg-preview.png" alt="3rd Place">
+            <div>
+                <span>Book 3rd Rank</span>
+                <p class="price">₹999/-</p>
+            </div>
+            <button class="book-btn" onclick="window.location.href='/matches'">Book Now</button>
+        </div>
+    </div>
+    <p class="help-text">If you face any issue to book your rank just click on above side WhatsApp and Telegram to contact us.</p>
+</body>
+</html>
+

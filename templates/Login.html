@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Gaming - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ff6b6b, #ffcc00);
+            color: black;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+            color: black;
+            position: relative;
+            text-align: center;
+        }
+        .login-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #d80027;
+            text-shadow: 0px 0px 5px #ffcc00;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group label {
+            font-weight: bold;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #d80027;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .enter-btn {
+            background: #d80027;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="login-title">Welcome to Dream 11 Official Website</p>
+        <form action="/submit" method="POST">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="name-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                <span class="error" id="phone-error"></span>
+            </div>
+            <button type="submit" id="enter-btn" class="enter-btn">Enter</button>
+        </form>
+    </div>
+</body>
+</html>

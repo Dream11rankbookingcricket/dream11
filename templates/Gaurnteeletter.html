@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarantee Letter - Dream 11</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff6b6b, #ffcc00);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            border: 3px solid #d80027;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d80027;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            height: 80px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: right;
+            color: #d80027;
+        }
+        .office-address {
+            border: 3px solid #d80027;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .user-details {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: #ffcc00;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 10px;
+            border-left: 5px solid #d80027;
+            background: #f8f8f8;
+            border-radius: 5px;
+        }
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+        }
+        .signature img {
+            height: 100px;
+        }
+        .next-btn {
+            display: block;
+            background: #d80027;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .next-btn:hover {
+            background: #c70024;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="static\uploads\Guarn_Logo.avif" alt="Logo">
+            </div>
+            <div class="title">Guarantee Letter</div>
+        </div>
+        <div class="office-address">
+            Office Address: ONE BKC TOWER, 12TH & 14TH FLOOR, UNIT 1201 & 1202 AND 1402, PLOT C-66 G BLOCK BANDRA KURLA COMPLEX, BANDRA EAST MUMBAI 400081
+        </div>
+        <div class="user-details">
+    
+            <p><strong>Dear {{ name }},</strong></p>
+            <p>📞 Mobile No: {{ phone }}</p>
+        </div>
+        <div class="content">
+            <strong>Subject: 100% Winning Guarantee</strong>
+            <p>Dear, मैं आपको आज होने वाले मैच में 100% जीताउंगा। आप आज के मैच Winner बन जाओगे। ये Dream 11 की Secret website है (<strong>Dream11cricketbooking.com</strong>) आप इस Website को Google पे भी Search कर सकते हो।</p>
+            <p><strong>Important:</strong> जितने भी सारे लोग 1st Rank में 1 करोड़ जीत रहे हैं, वो सभी इसी Website से Rank Book करवाते हैं।</p>
+            <p><strong>Guarantee:</strong> यदि आप किसी कारण आज मैच नहीं जीतते या आपकी Rank नहीं आती है तो आपको दूसरे मैच में जीता दिया जाएगा या आपका पैसा Refund कर दिया जाएगा।</p>
+        </div>
+        <div class="signature">
+            <p>Thanks,<br>Dream 11 Team</p>
+            <p>Email: dream11rankbookingcricket@gmail.com</p>
+            <p>Direct Contact No: 7240360157</p>
+            <img src="static\uploads\Screenshot_2025-02-01_120359-removebg-preview.png" alt="Company Seal">
+        </div>
+        <button class="next-btn" onclick="window.location.href='/bookplace'">Next</button>
+
+    </div>
+    <script>
+        document.getElementById("user-name").innerText = localStorage.getItem("userName") || "[User Name]";
+        document.getElementById("user-phone").innerText = localStorage.getItem("userPhone") || "[Phone Number]";
+    </script>
+</body>
+</html>

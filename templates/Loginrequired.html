@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Required</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+            color: black;
+        }
+        .sad-emoji {
+            font-size: 50px;
+        }
+        .back-btn {
+            background: #d80027;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="sad-emoji">😞</p>
+        <h2>Please do login first</h2>
+        <button class="back-btn" onclick="window.location.href='/home'">
+            ⬅ Go Back to Home
+        </button>               
+    </div>
+</body>
+</html>
